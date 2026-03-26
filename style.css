@@ -97,6 +97,17 @@ h2 { text-align: center; }
         grid-column: 2 / 3;  /* bottom right */
         grid-row: 2;
     }
+
+    /* Row 6 */
+    .row:nth-of-type(6) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .col-6:nth-last-child(2),
+    .col-6:nth-last-child(3),
+    .col-6:last-child { grid-column: 1 / span 2; }
 }
 
 /* ===== DESKTOP ===== */
@@ -149,11 +160,16 @@ h2 { text-align: center; }
     .col-5:nth-child(3) { grid-column: 4 / 5; }  /* right */
 
     /* ===== ROW 6 (simple unique layout) ===== */
-    .char-slide {
+    .row:nth-of-type(6) {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         gap: 1rem;
     }
+
+    /* last 2 cards stack in last column */
+    .col-6:nth-last-child(2),
+    .col-6:last-child { grid-column: 1 / span 5; }
+
 }
 
 /* ===== Images ===== */
