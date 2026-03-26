@@ -15,7 +15,14 @@ body {
     padding: 1rem;
 }
 
-h1, h3 { text-align: center; }
+.banner-img {
+    width: 1200px;
+    height: 300px;
+    max-width: none;  /* remove image size limit */
+    object-fit: fill;
+}
+
+h2 { text-align: center; }
 
 /* ===== GRID BASE ===== */
 .row {
@@ -109,8 +116,11 @@ h1, h3 { text-align: center; }
 
 /* ===== Images ===== */
 img {
-    width: 100%;
-    max-width: 225px;
+    width: 200px;
+    height: 350px;
+    object-fit: cover;
     display: block;  /* remove inline gap */
     margin: auto;  /* center image */
+
+    border: 5px solid #ffffff;
 }
